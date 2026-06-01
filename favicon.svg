@@ -1,5 +1,39 @@
-<svg width="50" height="50" viewBox="10 10 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M32 14L48 21L32 28L16 21L32 14Z" stroke="#8AF268" stroke-width="4" stroke-linejoin="round"/>
-  <path d="M16 31L32 38L48 31" stroke="#8AF268" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M16 41L32 48L48 41" stroke="#8AF268" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <rect width="1024" height="1024" fill="#000000"/>
+
+  <!--
+    Original icon breakdown (512x512 source):
+    - Top diamond ring: ~center y=140, diamond spans x 75-437, y 40-240
+    - Middle chevron: y spans ~260-350
+    - Bottom chevron: y spans ~370-460
+    
+    Scaled to 1024: multiply coords by 2, then center.
+    Original icon content area roughly 75-437 x, 40-470 y (out of 512)
+    Content width: 362px, content height: 430px
+    
+    For 1024x1024, with ~13% padding each side:
+    Padding: ~133px each side → content area 133-891 (758px wide)
+    Scale factor: 758/362 = 2.09
+    
+    Let me place things proportionally:
+    - Canvas: 1024x1024
+    - Stroke width: ~52px (fat rounded strokes like original)
+    - Diamond top: center 512, y~185. Left x~135, right x~889
+    - Diamond vertices: top(512,72), right(889,215), bottom(512,358), left(135,215)
+    - Middle chevron: y apex ~478, left(135,375), right(889,375)
+    - Bottom chevron: y apex ~650, left(135,548), right(889,548)
+  -->
+
+  <g fill="none" stroke="#5CE65C" stroke-width="58" stroke-linecap="round" stroke-linejoin="round">
+
+    <!-- Top diamond ring (hollow diamond = just outline polygon) -->
+    <polygon points="512,72 889,245 512,418 135,245"/>
+
+    <!-- Middle chevron -->
+    <polyline points="135,488 512,661 889,488"/>
+
+    <!-- Bottom chevron -->
+    <polyline points="135,692 512,865 889,692"/>
+
+  </g>
 </svg>
