@@ -1,8 +1,19 @@
 {
-  "name": "LogThat",
-  "short_name": "LogThat",
-  "display": "standalone",
-  "start_url": "/",
+  "name": "logthat!",
+  "short_name": "logthat!",
+  "icons": [
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#8de56a",
   "background_color": "#0a1208",
-  "theme_color": "#6ab84f"
+  "display": "standalone"
 }
