@@ -1,8 +1,0 @@
-{
-  "name": "LogThat",
-  "short_name": "LogThat",
-  "display": "standalone",
-  "start_url": "/",
-  "background_color": "#0a1208",
-  "theme_color": "#6ab84f"
-}
